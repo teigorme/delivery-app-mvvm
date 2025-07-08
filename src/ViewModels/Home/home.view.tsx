@@ -1,10 +1,13 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import { FC } from 'react'
+import { useHomeModel } from '@/ViewModels/Home/home.model'
 
-export default function HomeView() {
+const HomeView: FC<ReturnType<typeof useHomeModel>> = ({ data }) => {
     return (
         <View>
             <Text>HomeView</Text>
         </View>
     )
 }
+
+export default HomeView
